@@ -75,5 +75,61 @@ namespace entra21_tests
             return areEquals;
         }
 
+
+        public (int, int, int) Exercise5(int[] listA)
+        {
+            // Dado que a aplicação está preparada. Quando o usuário chamar o exercício 5, então a aplicação deverá retornar 
+            //um array A de 15 elementos e verificar quantos numeros estão acima, abaixo ou na média.
+            
+            int sum = 0;
+            int onAverage = 0;
+            int aboveAverage = 0;
+            int underAverage = 0;
+
+            for (int i = 0; i < listA.Length; i++)
+            {
+                sum += listA[i];
+            }  
+            int average = sum/listA.Length;
+
+            foreach (var item in listA)
+            {
+                if (item > average)
+                {
+                    aboveAverage++;                        
+                }
+                else if (item == average)
+                {
+                    onAverage++;
+                }
+                else
+                {
+                    underAverage++;
+                }
+            }
+            return (onAverage, aboveAverage, underAverage);
+        }
+
+        public (int[], int[], int[]) Exercise6(int[] listA, int[] listB)
+        {
+        // Dado que a aplicação está preparada. Quando o usuário chamar o exercício 6, então a aplicação deverá retornar um array A com 12 elementos e coloca-los em ordem 
+        //crescente, um array B com 12 elementos e coloca-los em ordem decrescente, e construir um array C, onde cada elemento de C é a soma do elemento correspondente de A 
+        //Com B. Colocar em ordem crescente a matriz C e apresentar os seus valores.
+        var listC = new int[5];
+
+        Array.Sort(listA);
+        Array.Sort(listB);
+        Array.Reverse(listB);
+
+        for (int i = 0; i < listC.Length; i++)
+        {
+            listC[i] = listA[i] + listB[i];
+        }
+        Array.Sort(listC);
+
+        return (listA, listB, listC);
+        }
+        
+
     }
 }

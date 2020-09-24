@@ -71,5 +71,40 @@ namespace entra21_tests
             Assert.Equal(expected, returnedValue);
         }
 
+
+        [Theory]
+        [InlineData(new int[5]{5, 10, 15, 20, 25}, 1, 2, 2)]
+        [InlineData(new int[5]{-6, 82, 41, 27, 0}, 0, 2, 3)]
+        [InlineData(new int[5]{34, 42, 16, 5, 27}, 0, 3, 2)]
+        public void should_return_the_amount_of_numbers_on_average_above_average_an_under_average(int[] listA, int expectedOnAverage, int expectedAboveAverage, int expectedUnderAverage)
+        {
+            // Dado / Setup
+            var exercises = new ArrayList1();
+
+            // Quando / Ação
+            (int, int, int) returnedValue = exercises.Exercise5(listA);
+
+            // Deve / Asserções
+            Assert.Equal(expectedOnAverage, returnedValue.Item1);
+            Assert.Equal(expectedAboveAverage, returnedValue.Item2);
+            Assert.Equal(expectedUnderAverage, returnedValue.Item3);
+        }
+
+
+        [Theory]
+        [InlineData(new int[5]{5, 7, 2, -5, 0}, new int[5]{8, 9, 2, 1, 4}, new int[5]{-5, 0, 2, 5, 7}, new int[5]{9, 8, 4, 2, 1}, new int[5]{4, 6, 7, 8, 8})]
+        public void should_return_the_ordered_listA_reversed_listB_and_ordered_listC(int[] listA, int[] listB, int[] expectedA, int[] expectedB, int[] expectedC)
+        {
+            // Dado / Setup
+            var exercises = new ArrayList1();
+
+            // Quando / Ação
+            (int[], int[], int[]) returnedValue = exercises.Exercise6(listA, listB);
+
+            // Deve / Asserções
+            Assert.Equal(expectedA, returnedValue.Item1);
+            Assert.Equal(expectedB, returnedValue.Item2);
+            Assert.Equal(expectedC, returnedValue.Item3);
+        }
     }
 }        
