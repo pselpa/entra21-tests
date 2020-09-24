@@ -1,8 +1,6 @@
-using System.Collections.Generic;
-using System.Linq;
 using Xunit;
 
-namespace entra21_tests
+namespace first_arrays_list_tests
 {
     public class ArrayList1Test
     {

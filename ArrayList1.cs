@@ -1,8 +1,6 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
 
-namespace entra21_tests
+namespace first_arrays_list_tests
 {
     class ArrayList1
     {
