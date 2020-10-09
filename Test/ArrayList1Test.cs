@@ -1,7 +1,8 @@
+using Domain;
 using Xunit;
 
 
-namespace first_arrays_list_tests
+namespace Test
 {
     public class Test
     {

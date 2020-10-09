@@ -1,6 +1,6 @@
 using System;
 
-namespace first_arrays_list_tests
+namespace Domain
 {
     public class ArrayList1
     {
