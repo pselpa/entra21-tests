@@ -2,7 +2,7 @@ using System;
 
 namespace first_arrays_list_tests
 {
-    class ArrayList1
+    public class ArrayList1
     {
         public int[] Exercise1(int[] listA, int[] listB)
         {

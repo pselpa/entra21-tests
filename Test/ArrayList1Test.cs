@@ -1,8 +1,9 @@
 using Xunit;
 
+
 namespace first_arrays_list_tests
 {
-    public class ArrayList1Test
+    public class Test
     {
         [Theory]
         [InlineData(new int[5]{1, 2, 3, 4, 5}, new int[5]{1, 2, 3, 4, 5}, new int[5]{0, 0, 0, 0, 0})]
